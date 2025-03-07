@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Aleatorio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Número Aleatorio entre 1 y 20</h1>
+        <button onclick="mostrarNumero()">Mostrar Número</button>
+        <p id="numeroAleatorio"></p>
+    </div>
+
+    <script>
+        function mostrarNumero() {
+            // Generar un número aleatorio entre 1 y 20
+            const numero = Math.floor(Math.random() * 20) + 1;
+            // Mostrar el número en el elemento p con id "numeroAleatorio"
+            document.getElementById('numeroAleatorio').innerText = `El número aleatorio es: ${numero}`;
+        }
+    </script>
+</body>
+</html>
+
